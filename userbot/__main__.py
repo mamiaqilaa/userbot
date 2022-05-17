@@ -18,7 +18,6 @@ from userbot import (
     LOGS,
     ALIVE_NAME,
     albyblacklist,
-    tgbot,
     bot,
     call_py,
 )
