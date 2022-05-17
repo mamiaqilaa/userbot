@@ -1,9 +1,9 @@
 from telethon import Button
 
-from userbot import BOTLOG, BOTLOG_CHATID, LOGS, tgbot
+from userbot import BOTLOG, BOTLOG_CHATID, INLINE_PIC, LOGS, tgbot
 
 
-async def startupmessage(tgbot):
+async def startupmessage(tgbot, INLINE_PIC):
     """
     Start up message in telegram logger group
     """
@@ -11,7 +11,7 @@ async def startupmessage(tgbot):
         if BOTLOG:
             await tgbot.send_file(
                 BOTLOG_CHATID,
-                "https://telegra.ph/file/cbe826936d4de9ec1838a.jpg",
+                INLINE_PIC,
                 caption="✨ **ALBY-Userbot Berhasil Diaktifkan**!!\n━━━━━━━━━━━━━━━\n➠ **Userbot Version** - 9.0@ALBY-Userbot\n➠ **Ketik** `.ping` **Untuk Mengecek Bot**\n➠ **Ketik** `.help` **Untuk Melihat Informasi Module**\n━━━━━━━━━━━\n➠ **Powered By:** @ruangprojects ",
                 buttons=[(Button.url("ɢʀᴏᴜᴘ ꜱᴜᴘᴘᴏʀᴛ", "https://t.me/ruangdiskusikami"),)],
             )
