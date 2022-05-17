@@ -58,7 +58,7 @@ LOGS.info(
 async def check_alive():
     try:
         if BOTLOG_CHATID != 0:
-            await startupmessage(tgbot)
+            await startupmessage(bot)
     except Exception as e:
         LOGS.info(str(e))
     try:
