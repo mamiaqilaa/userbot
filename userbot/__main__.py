@@ -19,6 +19,7 @@ from userbot import (
     ALIVE_NAME,
     albyblacklist,
     bot,
+    tgbot,
     call_py,
 )
 from userbot.modules import ALL_MODULES
@@ -58,7 +59,7 @@ LOGS.info(
 async def check_alive():
     try:
         if BOTLOG_CHATID != 0:
-            await startupmessage(bot)
+            await startupmessage(tgbot)
     except Exception as e:
         LOGS.info(str(e))
     try:
