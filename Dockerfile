@@ -1,11 +1,11 @@
 FROM punyaalby/alby-userbot:buster
 
-RUN git clone -b ALBY-Userbot https://github.com/PunyaArsya/hiopppp /root/userbot
-RUN mkdir /root/userbot/.bin
-RUN pip install --upgrade pip setuptools
-WORKDIR /root/userbot
+RUN git clone -b ALBY-Userbot https://github.com/PunyaArsya/hiopppp /home/ALBY-Userbot/ \
+    && chmod 777 /home/ALBY-Userbot \
+    && mkdir /home/ALBY-Userbot/bin/
 
-EXPOSE 80 443
+COPY ./sample_config.env ./config.env* /home/ALBY-Userbot/
 
-# Finalization
+WORKDIR /home/ALBY-Userbot/
+
 CMD ["python3", "-m", "userbot"]
