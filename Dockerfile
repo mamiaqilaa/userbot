@@ -5,7 +5,6 @@ RUN git clone -b ALBY-Userbot https://github.com/PunyaArsya/hiopppp /home/ALBY-U
     && mkdir /home/ALBY-Userbot/bin/
 WORKDIR /home/ALBY-Userbot/
 
-COPY ./sample_config.env ./config.env* /home/ALBY-Userbot/
-RUN pip install -r requirements.txt
+RUN pip3 install -r https://raw.githubusercontent.com/PunyaArsya/hiopppp/ALBY-Userbot/requirements.txt
 
 CMD ["python3", "-m", "userbot"]
